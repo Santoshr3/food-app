@@ -2,10 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider, BrowserRouter, Outlet } from 'react-router-dom';
 import App from './Component/App';
-import Homepage from './Component/Homepage';
 import About from './Component/About';
 import Contact from './Component/Contact';
-import Gallery from './Component/Gallery';
 import ProductDetails from './Component/ProductDetails';
 import Header from './Component/Header';
 import Footer from './Component/Footer';
@@ -26,13 +24,11 @@ const AppRouter = createBrowserRouter([
     path: '/',
     element: <AppLayout />,
     children: [
-      { path: "/", element: <Homepage /> },
-      { path: "app", element: <App /> },
+      { path: "/", element: <App /> },
       { path: "about", element: <About /> },
       { path: "contact", element: <Contact /> },
-      { path: "gallery", element: <Gallery /> },
       { path: "/product/:id", element: <ProductDetails /> },
-      { path: "*", element: <h1>404 Not Found</h1> },
+      { path: "*", element: <h1 className='fournotfour content container'><p>404 Not Found</p></h1> },
     ],
   },
 ]);

@@ -14,12 +14,12 @@ const ProductDetails = () => {
   const { cloudinaryImageId, name, cuisines, slaString, productdescription } = product;
 
   return (
-    <div className="product-details">
-      <div className='sub-card'>
-      <div className='product-img'>
+    <div className="product-detail-page container content">
+      <div className='sub-deatils-card'>
+      <div className='product-details-img'>
       <img src={cloudinaryImageId} alt={`${name} image`} />
       </div>
-      <div className='food-description'>
+      <div className='food-description-details'>
       <h2>{name}</h2>
       <h3>Product ID: {id}</h3>
       <h4>Cuisines: {cuisines.join(", ")}</h4>
