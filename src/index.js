@@ -1,7 +1,6 @@
-// src/index.js
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, BrowserRouter, Outlet } from 'react-router-dom';
 import App from './Component/App';
 import Homepage from './Component/Homepage';
 import About from './Component/About';
@@ -31,7 +30,7 @@ const AppRouter = createBrowserRouter([
       { path: "about", element: <About /> },
       { path: "contact", element: <Contact /> },
       { path: "gallery", element: <Gallery /> },
-      { path: "product/:id", element: <ProductDetails /> },
+      { path: "/product/:id", element: <ProductDetails /> },
       { path: "*", element: <h1>404 Not Found</h1> },
     ],
   },
@@ -39,5 +38,5 @@ const AppRouter = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <RouterProvider router={AppRouter} />
+    <RouterProvider router={AppRouter} />
 );
