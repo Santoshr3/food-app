@@ -19,11 +19,11 @@ html, body {
 #root {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensure the root element takes at least the full height of the viewport */
+  min-height: 100vh; 
 }
 
 .content {
-  flex: 1; /* This makes the content area expand to fill available space */
+  flex: 1; 
 }
 .header-wrapper {
 	box-shadow: 0 15px 40px -20px rgba(40, 44, 63, 0.15);
