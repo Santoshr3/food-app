@@ -31,8 +31,7 @@ const AppRouter = createBrowserRouter([
       { path: "about", element: <About /> },
       { path: "contact", element: <Contact /> },
       { path: "gallery", element: <Gallery /> },
-      { path: "/product/:id", element: <ProductDetails /> },
-      // Optional: a catch-all route for 404s
+      { path: "product/:id", element: <ProductDetails /> },
       { path: "*", element: <h1>404 Not Found</h1> },
     ],
   },
