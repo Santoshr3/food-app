@@ -10,6 +10,7 @@ import ProductDetails from './Component/ProductDetails';
 import Header from './Component/Header';
 import Footer from './Component/Footer';
 import ErrorBoundary from './Component/ErrorBoundary';
+import 'bootstrap/dist/css/bootstrap.css';
 import "./index.css";
 
 const AppLayout = () => (

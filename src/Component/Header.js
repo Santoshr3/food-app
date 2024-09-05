@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../assets/img/logo.png';
+import cart from '../assets/img/cart.png';
 
 // const Logo = () => {
 //     return (
@@ -30,7 +32,7 @@ import { Link } from 'react-router-dom';
 const Logo = () => {
     return (
        <Link to="/">
-         <img className='logo' src={Logo} alt="Logo" />
+         <img className='logo' src={logo} alt="Logo" />
        </Link>
     ); 
 };
@@ -47,12 +49,12 @@ const Header = () => {
                     <li><Link to="/gallery">Gallery</Link></li>
             
             </ul>
-            {/* <div className='header-right'>
+            <div className='header-right'>
             <p className='login'><Link to="/Login">Login</Link></ p>
             <p>
                 <img className='cart' src={cart} alt="cart" />
             </p>
-            </div> */}
+            </div>
             </div>
         </div>
        </div>
