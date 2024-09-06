@@ -60,7 +60,7 @@ html, body {
 	padding: 12px;
 }
 p.login {
-  margin-right: 20px;
+  margin-right: 0;
 }
 .header .login a {
 	color: #fff;
@@ -162,14 +162,34 @@ input[type="text"]:active {
   font-size: 18px;
   font-weight: 700;
   line-height: 20px;
+  min-height: 40px;
 }
-.card h6 {
+.card h6, .card p{
   letter-spacing: -.3px;
   color: #02060c;
-  margin: 10px 0;
+  margin: 2px 0 10px;
   font-size: 16px;
   font-weight: 400;
   line-height: 19px;
+}
+.card p{
+	font-weight: 200;
+	margin-bottom: 0;
+}
+.card h5 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #000;
+	margin-bottom: 0;
 }
 .card p {
   color: #02060c;
@@ -182,10 +202,10 @@ input[type="text"]:active {
 	margin: 30px 0;
 }
 .product-details-img {
-    padding: 0 15px;
     position: relative;
     width: 30%;
     flex: 0 0 30%;
+	padding-bottom: 20%;
 }
 .product-details-img img {
 	border-radius: 4px;
@@ -208,10 +228,12 @@ input[type="text"]:active {
 }
 .food-description-details h3{
 	font-size: 18px;
+	margin: 15px 0;
 }
 .food-description-details h4{
 	font-size: 16px;
 	font-weight: 500;
+	margin: 15px 0;
 }
 .food-description-details p{
 	font-size: 14px;
@@ -223,7 +245,7 @@ input[type="text"]:active {
 	border-radius: 10px;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 	max-width: 600px;
-	margin: 20px auto;
+	margin: 30px auto;
 }
 
 .authform h1 {
@@ -271,7 +293,6 @@ h1.fournotfour {
     margin-top: 30px;
 }
 .food-description {
-  min-height: 180px;
   padding: 10px 0;
 }
 
@@ -287,4 +308,52 @@ h1.fournotfour {
 	color: #fff;
 	text-align: center;
 	padding: 15px 0;
+}
+
+@media (max-width: 767px){
+	.header .logo{
+		width: 40px;
+	}
+	.header li{
+		margin: 0 10px;
+	}
+	.header li a {
+		padding: 5px;
+		font-size: 16px;
+	}
+	.header .login a{
+		font-size: 14px;
+		padding: 5px 10px;
+	}
+	.hero-section{
+		height: 20vh;
+	}
+	.card{
+		max-width: 50%;
+		flex: 0 0 50%;
+	}
+	.card h4{
+		font-size: 16px;
+	}
+	.card h6{
+		font-size: 14px;
+	}
+	.sub-deatils-card{
+		display: block;
+	}
+	.product-details-img{
+		width: 100%;
+		padding-bottom: 40%;
+		margin-bottom: 30px;
+	}
+	.food-description-details{
+		max-width: 100%;
+		flex: 0 0 100%;
+	}
+	.food-description-details p{
+		max-width: 100%;
+	}
+	.food-description-details{
+		padding: 0;
+	}
 }

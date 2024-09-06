@@ -11,8 +11,8 @@ const ProductCard = ({ cloudinaryImageId, name, id, cuisines, slaString, product
       <div className='food-description'>
       <h4>{name}</h4>
       <h6>Product ID: {id}</h6>
-      <h6>Cuisines: {cuisines.join(", ")}</h6>
-      <h6>SLA: {slaString}</h6>
+      <h5>Cuisines: {cuisines.join(", ")}</h5>
+      <p>SLA: {slaString}</p>
       </div>
       </div>
   </Link>

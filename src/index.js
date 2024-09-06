@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider, BrowserRouter, Outlet } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 import App from './Component/App';
 import About from './Component/About';
 import Contact from './Component/Contact';
@@ -10,6 +10,7 @@ import Footer from './Component/Footer';
 import ErrorBoundary from './Component/ErrorBoundary';
 import 'bootstrap/dist/css/bootstrap.css';
 import "./index.css";
+import Login from './Component/Login';
 
 const AppLayout = () => (
   <ErrorBoundary>
@@ -27,13 +28,23 @@ const AppRouter = createBrowserRouter([
       { path: "/", element: <App /> },
       { path: "about", element: <About /> },
       { path: "contact", element: <Contact /> },
-      { path: "/product/:id", element: <ProductDetails /> },
+      { path: "login", element: <Login /> },
+      { path: "product/:id", element: <ProductDetails /> },
       { path: "*", element: <h1 className='fournotfour content container'><p>404 Not Found</p></h1> },
     ],
   },
 ]);
 
+const AuthApp = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  return (
+    <RouterProvider 
+      router={AppRouter}
+      context={{ isAuthenticated, setIsAuthenticated }}
+    />
+  );
+};
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    <RouterProvider router={AppRouter} />
-);
+root.render(<AuthApp />);

@@ -24,9 +24,9 @@ const Header = () => {
             </ul>
             <div className='header-right'>
             <p className='login'><Link to="/Login">Login</Link></ p>
-            <p>
+            {/* <p>
                 <img className='cart' src={cart} alt="cart" />
-            </p>
+            </p> */}
             </div>
             </div>
         </div>
